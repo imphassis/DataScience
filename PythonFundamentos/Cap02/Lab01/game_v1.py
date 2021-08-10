@@ -13,7 +13,7 @@ root.title("Ping Pong")
 root.resizable(0,0)
 root.wm_attributes("-topmost", -1)
 
-canvas = Canvas(root, width=800, height=600, bd=0,highlightthickness=0)
+canvas = Canvas(root, width=1920, height=1080, bd=0,highlightthickness=0)
 canvas.pack()
 
 root.update()

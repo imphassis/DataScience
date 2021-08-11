@@ -9,10 +9,14 @@ print("""1 - Soma
 2 - Subtração
 3 - Multiplicação
 4 - Divisão""")
-userChoice = input('Digite o número da operação desejada: ')
-firstNumber = input('Digite o primeiro número: ')
-secondNumber = input('Digite o segundo número: ')
+userChoice = int(input('Digite o número da operação desejada: '))
+firstNumber = int(input('Digite o primeiro número: '))
+secondNumber = int(input('Digite o segundo número: '))
 
-oper = {1: lambda x, y: x+y, 2: lambda x, y: x-y, 3: lambda x,y :x*y, 4: lambda x,y :x/y}
-result = oper[int(userChoice)](int(firstNumber), int(secondNumber))
+signs = {1:'+', 2:'-', 3:'*', 4:'/'}
+
+operations = {1: lambda x, y: x+y, 2: lambda x, y: x-y, 3: lambda x,y :x*y, 4: lambda x,y :x/y}
+result = operations[userChoice](firstNumber, secondNumber)
+calculation = f"{firstNumber} {signs[userChoice]} {secondNumber} = {result}"
 print(f' O resultado da sua operação é {result}')
+print(calculation)
